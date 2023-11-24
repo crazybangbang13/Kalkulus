@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="kalkulator.css">
+    <script src="https://www.desmos.com/api/v1.8/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>   
+</head>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url(background1.png);
+            background-size: cover;
+            font-family: 'quicksand';
+        }
+    </style>
+</head>
+
+    <body>
+        <!--NAVIGATION START-->
+        <div class="fContainer">
+            <nav class="wrapper">
+                <div class="calculator">
+                <div class="firstname">Kalkulator Fungsi</div>
+                <div class="lastname">Eksponen</div>
+        </div>
+                <ul class="navigation">
+                    <li><a href="/kalkulator.html" class="active">Kalkulator</a></li>
+                    <li><a href="/about.html">Partner</a></li>
+                    <li><a href="/help.html">Help</a></li>
+                    <li><a href="/index.html">Home</a></li>
+                </ul>
+            </nav>
+        <!--NAVIGATION END-->
+
+        <!--CALCULATOR START-->
+        <div class="input">
+                <!-- Kolom Input Variabel -->
+                <li><label class="nilaik" for="input-k">Masukkan nilai k: </label></li>
+                <input class="input1" type="text" id="input-k" placeholder="Contoh: 2">
+        
+                <li><label class="nilaia" for="input-a">Masukkan nilai a:</label></li>
+                <input class="input2" type="text" id="input-a" placeholder="Contoh: 1.5">
+        
+                <li><label class="nilaix" for="input-x">Masukkan nilai x:</label></li>
+                <input class="input3" type="text" id="input-x" placeholder="Contoh: x atau x-2">
+        
+                <li><button class="input4" onclick="hitungDanGambarGrafik()">Hitung dan Gambar Grafik</button></li>
+        </div>
+    
+        <div class="grafik" id="grafik" style="width: 600px; height: 400px;">
+            <script>
+                var elt = document.getElementById('grafik');
+                var grafik = Desmos.GraphingCalculator(elt, {keypad: false});
+                var indexexpresi = 0;
+        
+        
+        // Fungsi untuk menghitung nilai fungsi dan menggambar grafik di Desmos
+        function hitungDanGambarGrafik() {
+            // Ambil nilai dari input
+            const k = document.getElementById('input-k').value || 1;
+            const a = document.getElementById('input-a').value || 1;
+            var x = document.getElementById('input-x').value || 'x';
+
+            // Hitung nilai fungsi
+            const fungsi = String.raw`y=${k}*${a}^{${x}}`;
+
+            // Update grafik di Desmos
+            
+            grafik.setExpression({ id: `grafik${indexexpresi}`, latex: fungsi });
+            indexexpresi++;
+
+        }
+            </script>
+        </div>
+        <!--CALCULATOR END-->
+
+    </body>
+</html>

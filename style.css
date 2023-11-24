@@ -1,0 +1,125 @@
+*, 
+
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100%;
+    height: 100vh;
+}
+
+.fContainer {
+    width: 100%;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    height: 80px;
+    background-color: #222;
+    box-shadow: 0 7px 15px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.5em;
+    padding: 15px;
+    text-transform: capitalize;
+}
+
+.firstname {
+    color: white;
+    font-weight: 700;
+}
+
+.lastname {
+    color: rgb(0, 81, 255);
+    padding-left: 4px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation>li {
+    list-style-type: none;
+    padding: 15px;
+
+}
+
+.navigation>li>a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.navigation>li>a:hover {
+    color:blue;
+    transition: all .3s ease-in-out;
+
+}
+
+.active {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+}
+
+.active:hover {
+    color: white !important;
+
+}
+
+.welcome {
+    color: navy;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 50px;
+    text-shadow: 2px 2px white;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.home {
+    line-height: 2;
+    margin-top: 60px;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color:white;
+    text-shadow: 2px 2px black;
+    display: flex;
+    justify-content: center;
+}
+
+.home1 {
+    line-height: 2;
+    margin-top: 30px;
+    font-size: 30px;
+    margin-left: 200px;
+    margin-right: 200px;
+    color:white;
+    text-shadow: 2px 2px black;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
